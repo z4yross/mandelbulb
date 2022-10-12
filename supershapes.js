@@ -10,7 +10,7 @@ const detF = 50;
 const LIMIT = 2;
 const ITERATIONS = 10;
 
-let N = 8;
+let N = 3;
 
 let shape = [];
 
@@ -21,7 +21,7 @@ let easycam;
 
 let cube;
 
-let deltaN = 0.000;
+let deltaN = 0.05;
 
 
 
@@ -33,8 +33,8 @@ function preload() {
 }
 
 function setup() {
-    // createCanvas(parent.innerWidth, parent.innerWidth, WEBGL);
-    createCanvas(200, 200, WEBGL);
+    createCanvas(parent.innerWidth, parent.innerWidth, WEBGL);
+    // createCanvas(200, 200, WEBGL);
 
     // let state = {
     //     distance: 2,           // scalar
@@ -84,14 +84,14 @@ function setup() {
 
     // const pr1 = { a: 1, b: 1, k: 2, l: 2, n1: 2, n2: 2, n3: 2 }
     // const pr2 = { a: 1, b: 1, k: 2, l: 2, n1: 2, n2: 2, n3: 2 }
-
+    
     // superformula(pr1, pr2, 200);
 
     // superformula(1, 1, 3, 3, 2, 5, 7, 200);
 
     // console.log(nylander(1, 1, 1, 3));
 
-    mandelbulb();
+    // mandelbulb();
     // console.log(shape[0][0]);
     // quad(-1, -1, 1, -1, 1, 1, -1, 1);
     // drawShader();
@@ -101,19 +101,19 @@ function setup() {
 function draw() {
     background(0);
     // orbitControl();
-    // fill(255);
+    fill(255);
 
     // noStroke();
 
     // sphere(200);
-    drawShape();
+    // drawShape();
     // mandelbulb();
 
     // mandelbulbShader.setUniform('r', 1.5 * exp(-6.5 * (1 + sin(millis() / 2000))));
     // quad(-width/2, -height/2, width/2, -height/2, width/2, height/2, -width/2, height/2);
 
 
-    // quad(-1, -1, 1, -1, 1, 1, -1, 1);
+    quad(-1, -1, 1, -1, 1, 1, -1, 1);
 
     // sphere(200);
     // model(cube);
@@ -121,7 +121,7 @@ function draw() {
     // console.log(frameCount)
 
     // console.log(pMatrix());
-    // drawShader();
+    drawShader();
     // drawShader();
     // fill(255)
     // console.log(mMatrix().mat4);
@@ -262,24 +262,24 @@ function drawShape() {
     // strokeWeight(0.1);
     // noStroke();
 
-    // // let c = color(255);
+    // let c = color(255);
 
     // colorMode(RGB, detT);
 
-    // // beginShape(TRIANGLE_STRIP );
+    // beginShape(TRIANGLE_STRIP );
 
-    // for (let i = 0; i < detX; i++) {
+    // for (let i = 0; i < detT; i++) {
     //     beginShape(TRIANGLE_STRIP);
 
     //     for (let j = 0; j < shape[i].length; j++) {
     //         if(!shape[i+1][j])
     //             continue
 
-    //         // const ji = map(j, 0, detF, 0, detT)
+    //         const ji = map(j, 0, detF, 0, detT)
 
-    //         // fill(abs((i * 2) - detT), 0, detT - abs((ji * 2) - detT))
+    //         fill(abs((i * 2) - detT), 0, detT - abs((ji * 2) - detT))
 
-    //         console.log(i, j);
+    //         // console.log(i, j);
 
     //         let v1 = shape[i][j];
     //         vertex(v1.x, v1.y, v1.z);
