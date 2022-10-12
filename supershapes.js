@@ -4,8 +4,8 @@ const detX = 100;
 const detY = 100;
 const detZ = 100;
 
-const detT = 200;
-const detF = 200;
+const detT = 50;
+const detF = 50;
 
 const LIMIT = 2;
 const ITERATIONS = 10;
@@ -33,7 +33,8 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(parent.window.innerHeight, parent.window.innerHeight, WEBGL);
+    // createCanvas(parent.innerWidth, parent.innerWidth, WEBGL);
+    createCanvas(200, 200, WEBGL);
 
     // let state = {
     //     distance: 2,           // scalar
@@ -90,7 +91,7 @@ function setup() {
 
     // console.log(nylander(1, 1, 1, 3));
 
-    // mandelbulb();
+    mandelbulb();
     // console.log(shape[0][0]);
     // quad(-1, -1, 1, -1, 1, 1, -1, 1);
     // drawShader();
@@ -105,7 +106,7 @@ function draw() {
     // noStroke();
 
     // sphere(200);
-    // drawShape();
+    drawShape();
     // mandelbulb();
 
     // mandelbulbShader.setUniform('r', 1.5 * exp(-6.5 * (1 + sin(millis() / 2000))));
@@ -121,7 +122,7 @@ function draw() {
 
     // console.log(pMatrix());
     // drawShader();
-    drawShader();
+    // drawShader();
     // fill(255)
     // console.log(mMatrix().mat4);
     // sphere(200);
